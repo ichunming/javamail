@@ -2,21 +2,29 @@ package com.yimeicloud.study.javamail.entity;
 
 public class Mail {
 	// 发件人邮箱
-	private String sender = "mrspring@126.com";
+	private String sender = "***@126.com";
 	// 发件人邮箱的用户名
-	private String username = "ming";
+	private String username = "***";
 	// 发件人邮箱的密码
-	private String password = "909090";
+	private String password = "***";
 	// 发送邮件的服务器地址
 	private String host = "smtp.126.com";
 	// 协议
 	private String protocol = "smtp";
 	// 主题
-	private String subject = "邮件主题";
+	private String subject;
 	// 内容
-	private String content = "邮件内容";
+	private String content;
 	// 收件人
-	private String receiver = "407201244@qq.com";
+	private String receiver;
+	
+	public Mail() {}
+	
+	public Mail(String subject, String content, String receiver) {
+		this.subject = subject;
+		this.content = content;
+		this.receiver = receiver;
+	}
 	
 	public String getSender() {
 		return sender;

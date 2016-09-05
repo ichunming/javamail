@@ -1,11 +1,14 @@
 package javamail;
 
-import com.yimeicloud.study.javamail.entity.Mail;
-import com.yimeicloud.study.javamail.sender.Sendmail;
+import static org.junit.Assert.assertTrue;
+import org.junit.Test;
+import com.yimeicloud.study.javamail.util.MailUtil;
 
 public class MailTest {
-	public static void main(String[] args) {
-		Sendmail sendmail = new Sendmail(new Mail());
-		new Thread(sendmail).start();
+	
+	@Test
+	public void test() {
+		boolean result = MailUtil.sendWithAttach("Subject", "Content", "***@qq.com", new String[] {"test.txt"});
+		assertTrue(result);
 	}
 }
