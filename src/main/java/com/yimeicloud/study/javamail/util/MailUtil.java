@@ -29,7 +29,7 @@ public class MailUtil {
 	 * @return
 	 */
 	public static boolean send(String subject, String content, String receiver) {
-		return sendWithAttach(subject, content, receiver, null);
+		return send(subject, content, receiver, null);
 	}
 	
 	/**
@@ -40,7 +40,7 @@ public class MailUtil {
 	 * @param filenames
 	 * @return
 	 */
-	public static boolean sendWithAttach(String subject, String content, String receiver, String[] filenames) {
+	public static boolean send(String subject, String content, String receiver, String[] filenames) {
 		try {
 			Mail mail = createMail(subject, content, receiver);
 			Properties prop = new Properties();

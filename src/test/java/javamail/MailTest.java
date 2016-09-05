@@ -8,7 +8,11 @@ public class MailTest {
 	
 	@Test
 	public void test() {
-		boolean result = MailUtil.sendWithAttach("Subject", "Content", "***@qq.com", new String[] {"test.txt"});
+		// send simple email
+		//boolean result = MailUtil.send("Subject", "Content", "***@qq.com");
+		
+		// send email with attachment
+		boolean result = MailUtil.send("Subject", "Content", "***@qq.com", new String[] {"test.txt"});
 		assertTrue(result);
 	}
 }
