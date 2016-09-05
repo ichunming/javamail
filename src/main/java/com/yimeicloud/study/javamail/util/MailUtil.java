@@ -1,3 +1,7 @@
+/**
+ * java mail发送邮件
+ * 2016/09/05 ming
+ */
 package com.yimeicloud.study.javamail.util;
 
 import java.util.Properties;
